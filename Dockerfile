@@ -5,19 +5,7 @@ WORKDIR /code
 # Install stable packages from CRAN
 RUN install2.r --error \
     shiny \
-    shinydashboard \
-    reactable \
-    shinyjs \
-    shinyWidgets \
-    dplyr \
-    ggplot2 \
-    lubridate \
-    readr
-
-# Install development packages from GitHub
-# RUN installGithub.r \
-#     rstudio/bslib \
-#     rstudio/httpuv
+    tidyverse
 
 COPY . .
 
