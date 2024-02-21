@@ -1,6 +1,6 @@
 ---
-title: Shiny for R template
-emoji: 📚
+title: Weight Loss Dashboard Minimal
+emoji: 📉
 colorFrom: blue
 colorTo: yellow
 sdk: docker
