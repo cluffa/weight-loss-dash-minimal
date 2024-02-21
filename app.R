@@ -1,12 +1,3 @@
-#
-# This is a Shiny web application. You can run the application by clicking
-# the 'Run App' button above.
-#
-# Find out more about building applications with Shiny here:
-#
-#    http://shiny.rstudio.com/
-#
-
 library(shiny)
 
 # Define UI for application that draws a histogram
@@ -34,23 +25,13 @@ ui <- fluidPage(
                     min = 7,
                 )
             ),
-            # br(),
-            # div(
-            #     style="display:inline-block",
-            #     actionButton(
-            #         inputId = "update",
-            #         label = "update plot"
-            #     )
-            # )
         ),
-        
         mainPanel(
             plotOutput("distPlot")
         )
     )
 )
 
-# Define server logic required to draw a histogram
 server <- function(input, output, session) {
     library(ggplot2)
     library(readr)
@@ -70,7 +51,6 @@ server <- function(input, output, session) {
         weight
     )
     
-    # df_trunc <- eventReactive(input$update, {
     df_trunc <- reactive({
         df %>% 
             filter(date >= Sys.Date() %m-% months(input$months)) %>%
@@ -111,7 +91,6 @@ server <- function(input, output, session) {
             ) +
             scale_color_manual(values=c("gray", "black"))
     }) |> bindCache(input$span, input$months)
-    
 }
 
 # Run the application 
