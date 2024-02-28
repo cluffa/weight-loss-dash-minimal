@@ -1,10 +1,2 @@
----
-title: Weight Loss Dashboard Minimal
-emoji: 📉
-colorFrom: blue
-colorTo: yellow
-sdk: docker
-pinned: false
----
-
-Check out the configuration reference at https://huggingface.co/docs/hub/spaces-config-reference
+# Simple weight loss tracking dashboard  
+<https://cluffa.shinyapps.io/Weight-Loss-Trends-Simple/>
